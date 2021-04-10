@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+
+<html lang="pt-br">
+    
+    <head>
+	<title>Lista de usuarios</title>
+	<meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale1.0"/>
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+		
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+    </head>
+    <body>
+	<div id="contener">
+            <div id="row">
+		<div  id="titulo" class="col-md-12">
+                    <h1>Lista de Usuarios</h1>
+		</div>
+                <div  id="criar" class="col-md-12">
+                    <a href="/cadastro">Criar um usuario.</a>
+		</div>	
+		<div  id="cabesario" class="col-md-12">
+                    <table border="5" cellpadding="10" bgcolor="#006400" >
+			<thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>NOME</th>
+                                <th>EMAIL</th>
+                                <th>SENHA</th>
+                                <th>ID PAIS</th>
+                            </tr>
+			</thead>
+			<tbody>
+                            <tr th:each="usuario : ${listUsuario}">
+                                <td th:text="%{usuario.id_usuario}">ID</td>
+                                <td th:text="%{usuario.nome}">NOME</td>
+                                <td th:text="%{usuario.email}">EMAIL</td>
+                                <td th:text="%{usuario.senha}">SENHA</td>
+                                <td th:text="%{usuario.id_pais}">ID PAIS</td>
+                                <td>
+                                    <a th:href="@{'/delete/'+${usuario.id}}">Apagar</a>
+                                </td> 
+                            </tr>    
+			</tbody>  
+		</div>
+            </div>
+	</div>
+    </body>
+</html>

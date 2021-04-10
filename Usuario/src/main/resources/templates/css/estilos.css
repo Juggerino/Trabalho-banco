@@ -1,0 +1,43 @@
+#body{
+	width: 1517px;
+	height: 100%;
+}
+#contener{
+	width: 1517px;
+	height: 750px;
+	background-image: url(../img/deadCells5.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+}
+#contener{
+	color:#941424;
+}
+
+#criar{
+	padding:1%;
+	margin-top:5%;
+	margin-left:1%;
+	background-color:#006400;
+	opacity: 0.9;
+	width: 20%;
+	height: 20%;
+	font-size:20px;
+	text-align:center;
+	color:green;
+}
+
+
+
+#cabesario{
+	padding:1%;
+	margin-top:1%;
+	width: 40%;
+	height: 30%;
+	color:#941424;
+	font-size:20px;
+	opacity: 0.9;
+}
+
+

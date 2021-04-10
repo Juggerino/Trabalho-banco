@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+
+<html lang="pt-br">
+    
+    <head>
+		<title>Novo Usuario</title>
+		<meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" type="text/css" href="css/estilos2.css">
+		
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+    </head>
+    <body>
+	<div id="contener">
+            <div id="row">
+		<div  id="titulo" class="col-md-6">
+                    <h1>Lista de Usuarios</h1>
+		</div>
+                <form action="#" th:action="@{/save}" th:object="${usuario}" method="post">    
+                    <div  id="titulo" class="col-md-6">
+						 <table border="0" cellpadding="10">
+						    <td class="cadastro">Nome:</td>
+                            <td	class="cadastro"><input type="text" th:field="*{nome}"/></td>
+                            <td class="cadastro">E-mail:</td>
+                            <td class="cadastro"><input type="text" th:field="*{email}"/></td>
+                            <td class="cadastro">Senha:</td>
+                            <td class="cadastro"><input type="text" th:field="*{senha}"/></td>
+                            <td class="cadastro">Pais:</td>
+                            <td class="cadastro"><input type="text" th:field="*{id_pais}"/></td> 
+						</table>
+                        <div  id="criar" class="col-md-12">
+                            <td colpan="2"><button type="submit">Salvar</button>  
+                        </div>
+                                 
+                    </div>
+                </form>        
+            </div>
+        </div>    
+    </body>
+</html>

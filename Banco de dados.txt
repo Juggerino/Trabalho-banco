@@ -1,0 +1,75 @@
+create database bd_usuario;
+
+
+
+
+use bd_usuario;
+
+      
+     
+
+ 
+create table paises(
+			
+		id_pais int(3)zerofill auto_increment,
+            
+		nome_pais varchar(30)not null,
+          
+		primary key (id_pais)
+       
+		);
+
+
+
+
+
+create table usuario(
+	
+		id_usuario int(3)zerofill auto_increment,
+
+            	nome varchar(20)not null,
+
+           	email varchar(30)not null,
+
+           	senha varchar(15)not null,
+            
+		id_pais int(3)zerofill,
+
+           	primary key (id_usuario),
+
+         	FOREIGN KEY (id_pais)
+	  	REFERENCES paises (id_pais)
+		);
+
+
+
+  
+INSERT INTO paises (nome_pais)
+VALUES 	("Brasil"),
+
+	  			       	("China"),
+
+       					("Canada"),
+
+       					("Chile"),
+
+       					("Japao");
+
+
+
+
+
+INSERT INTO usuario (nome,email,senha,id_pais)
+VALUES 	("mateus","mateus@gmail","123456",1),
+
+	  						("joao","gilmat@hotmail.com","da4615",1),
+
+       							("pedro","pedra.ro@gmail.com","546da89",3),
+
+       							("bruno","bu.bubu@gmail.com","159753ewq",2),
+
+	   						("andressa", "sadre@hotmail.com.br","d4as56d4",2); 
+
+
+      
+
